@@ -1,2 +1,2 @@
 # v2ray_subscriber
-v2ray configuration generator from subscribe url
+This is a bug fixed version of v2sub, a tool to subscribe v2ray server feeds
