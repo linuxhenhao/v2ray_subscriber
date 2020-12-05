@@ -80,6 +80,8 @@ def parser_subscribe(url, name=DEFAULT_SUBSCRIBE):
     for node in nodes:
         node = utils.byte2str(node).replace("vmess://", "")
         node = utils.byte2str(base64.b64decode(pad_content(node)))
+        if node is None or node == "":
+            continue
         servers.append(json.loads(node))
     all_servers = utils.read_from_json(SERVER_CONFIG)
     all_servers.update({name: servers})
