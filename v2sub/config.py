@@ -3,7 +3,7 @@ from v2sub import utils
 V2RAY_CONFIG_FILE = "/etc/v2ray/config.json"
 
 
-def _get_config(addr: str, port: int, id_: str, proto: str, tls: str, ws_path: str=None, client_port=1080) -> dict:
+def _get_config(addr: str, port: int, id_: str, proto: str, tls: str, ws_path: str="", client_port=1080) -> dict:
     stream_settings = {
         "network": "ws" if proto == "ws" else "tcp",
     }
